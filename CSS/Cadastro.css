@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:rgb(41, 41, 41);
+    color: white;
+    font-weight: 500;
+    display: flex;
+    min-height: 100vh;
+}
+
+main{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1{
+    color: rgb(255, 221, 0);
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main .social-midia{
+    display: flex;
+    align-content: center;
+}
+main .social-midia a{
+    text-decoration: none;
+}
+
+main .social-midia img{
+    width: 36px;
+    margin-left: 3rem;
+}
+main .social-midia a:first-child img{
+    margin-left: 0;
+}
+
+main .alternative{
+    margin-top: 1rem;
+}
+main .alternative span{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color:rgb(255, 221, 0);
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+main .alternative span::before,main .alternative span::after{
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100px;
+    bottom: 50%;
+    right: 50px;
+    background-color: white;
+}
+main .alternative span::after{
+    left: 50px;
+}
+
+main form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+main form label{
+    display: flex;
+    flex-direction: column;
+}
+main form label span{
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+
+main form input{
+    background-color: #1e1f21;
+    width: 300px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    border: 1px solid rgb(255, 221, 0);
+    border-radius: 8px;
+
+}
+
+main form input[type="submit"] {
+    cursor: pointer;
+    width: 50%;
+    margin-top: 4rem;
+    border: none;
+    border-radius: 32px;
+    background-color: rgb(255, 221, 0);
+    color: black;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+
+}
+
+main form input[type="submit"]:hover{
+    background-color: white;
+}
+
+#menu-h{
+    list-style-type: none;
+    padding: 0;
+    background-color:rgb(255, 221, 0);
+    text-align: center;
+}
+
+#menu-h li{
+    display: inline;
+}
+
+#menu-h li a{
+    padding: 20px;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    transition:background 0.6s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#menu-h li a:hover{
+    background-color: white;
+}
+

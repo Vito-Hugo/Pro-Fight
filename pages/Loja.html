@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Pro Fight</title>
+    <link rel="stylesheet" href="/CSS/Loja.css">
+</head>
+<body>
+    <ul id="menu-h">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="Loja.html">Loja</a></li>
+        <li><a href="Cadastro.html">Cadastro</a></li>
+        <li><a href="Aulas.html">Aulas</a></li>
+        <li><a href="Atendimento.html">Atendimento</a></li>
+        <li><a href="Quem-somos.html">Quem somos</a></li>
+    </ul>
+    <h2>Vitrine</h2>
+    <div id="produtos">
+        
+        
+    </div>
+    <h2>Carrinho</h2>
+    <div id="carrinho">
+        
+
+    </div>
+    <script>
+        const items = [
+            {
+                id:0,
+                nome:"Luva maximum R$ 200,00",
+                img:"../img/a941307047.webp",
+                quantidade:0
+            },
+            {
+                id:1,
+                nome:"Bucal R$85,00",
+                img:"../img/Bucal.webp",
+                quantidade:0 
+            },
+            {
+                id:2,
+                nome:"Caneleira R$250,00",
+                img:"../img/Caneleira.webp",
+                quantidade:0
+            },
+
+        ]
+        inicializarloja = () => {
+            var containerProdutos = document.getElementById("produtos");
+            items.map((val)=>{
+                containerProdutos.innerHTML+=`
+                <div class="produto-single">
+                    <img src="`+val.img+`"/>
+                    <p>`+val.nome+`</p>
+                    <a key="`+val.id+`"href="#">Adicionar ao carrinho!</a>
+                    
+                </div>
+
+
+                `;
+               
+            })
+        }
+
+        inicializarloja();
+
+        atualizarCarrinho = () =>{
+            var containerCarrinho = document.getElementById("carrinho");
+            containerCarrinho.innerHTML = "";
+            items.map((val)=>{
+                if(val.quantidade > 0){
+                containerCarrinho.innerHTML+=`
+                <div class="info-single-checkout">
+                <p style="float:left;">Produto: `+val.nome+` </p>
+                <p style="float:right;">Quantiade: `+val.quantidade+` </p>
+                <div style="clear:both"></div>
+        
+                </div>
+
+
+                `;
+                }
+               
+            })
+        }
+
+        var links = document.getElementsByTagName("a");
+
+        for(var i = 0; i < links.length; i++){
+            links[i].addEventListener("click",function(){
+                let key = this.getAttribute("key");
+                items[key].quantidade++;
+                atualizarCarrinho();
+                return false;
+            })
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>
