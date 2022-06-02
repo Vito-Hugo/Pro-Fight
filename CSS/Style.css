@@ -71,10 +71,10 @@ h1{
 }
 
 .carrossel{
-    box-shadow: 2px 2px 4px white;
+    box-shadow: 2px 2px 4px black;
     overflow: hidden;
-    height: 483px;
-    width: 482px;
+    height: 480px;
+    width: 480px;
  
 
 }
@@ -90,3 +90,96 @@ img{
     height: 500px;
     width: 500px;
 }
+
+footer{
+    background-color: rgb(129, 127, 127);
+    padding: 5em;
+    padding-bottom: 40px;
+    border-top: 5px solid rgb(255, 221, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer img{
+    width: 180px;
+}
+
+footer h2, footer p, footer a, footer span{
+    color: #d1d1d1;
+}
+
+footer h2{
+    font-weight: 400;
+}
+
+footer a{
+    text-decoration: none;
+
+}
+
+footer ul{
+    padding: 0;
+}
+
+footer li{
+    list-style: none;
+}
+
+.footer-box {
+    width: 31%;
+    padding: 1%;
+    float: left;
+}
+
+footer .wrapper:after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.company-footer{
+    width: ;
+}
+
+.company-footer h2{
+    margin-top: 0px;
+}
+
+.company-footer h2,.company-footer p{
+    margin-bottom: 25px;
+}
+
+.footer-list li{
+    margin-bottom: 3px;
+}
+
+.footer-list a{
+    transition: .5s;
+}
+
+.footer-list a:hover{
+    color: #fff;
+}
+
+.footer-list li:after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.insta{
+    position: relative;
+    height: 25px;
+    width: 25px;
+
+
+}
+
+.estilos-footer{
+    margin-top: 0px;
+    ;
+}
+
+
+
+
+
